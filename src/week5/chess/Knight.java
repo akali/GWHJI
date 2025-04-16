@@ -1,4 +1,4 @@
-package week4.chess;
+package week5.chess;
 
 public class Knight extends Piece {
     public Knight(int x, int y, String color) {
@@ -23,5 +23,7 @@ public class Knight extends Piece {
     public boolean canBeat(int nx, int ny) {
         return canMove(nx, ny);
     }
-
+    public String name() {
+        return "K";
+    }
 }
