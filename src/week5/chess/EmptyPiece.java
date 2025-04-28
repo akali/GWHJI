@@ -16,4 +16,9 @@ public class EmptyPiece extends Piece {
     public boolean canBeat(int nx, int ny) {
         return false;
     }
+
+    @Override
+    public String getPieceName() {
+        return "";
+    }
 }

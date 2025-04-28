@@ -23,6 +23,12 @@ public class Knight extends Piece {
     public boolean canBeat(int nx, int ny) {
         return canMove(nx, ny);
     }
+
+    @Override
+    public String getPieceName() {
+        return "Knight";
+    }
+
     public String name() {
         return "K";
     }

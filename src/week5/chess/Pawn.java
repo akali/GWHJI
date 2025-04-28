@@ -26,7 +26,16 @@ public class Pawn extends Piece {
         return (y + 1 == ny || y - 1 == ny);
     }
 
+    @Override
+    public String getPieceName() {
+        return "Pawn";
+    }
+
     public String name() {
-        return "♟";
+        if (color.equals("white")) {
+            return "wP";
+        } else {
+            return "bP";
+        }
     }
 }
