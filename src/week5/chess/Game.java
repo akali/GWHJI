@@ -83,4 +83,23 @@ public class Game {
             System.out.println(this.piecesCount.get(piece) + " " + piece.color + " " + piece.getPieceName());
         }
     }
+
+    public Position convertStringToPosition(String input) throws IllegalPositionException {
+        if (input.length() != 2) {
+            throw new IllegalPositionException(input);
+        }
+        if ('A' > input.charAt(0) || input.charAt(0) > 'H' || '1' > input.charAt(1) || input.charAt(1) > '8') {
+            throw new IllegalPositionException(input);
+        }
+        return new Position(input);
+    }
+
+    public void validateMoves(String from, String to) throws IllegalMoveException {
+        try {
+            Position fromPosition = convertStringToPosition(from);
+            Position toPosition = convertStringToPosition(to);
+        } catch (IllegalPositionException e) {
+            throw new IllegalMoveException(from, to, e);
+        }
+    }
 }
