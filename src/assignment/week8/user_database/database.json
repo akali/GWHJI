@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "name": "taalai",
+      "age": 35,
+      "gender": "MALE",
+      "pets": null
+    },
+    {
+      "name": "anuar",
+      "age": 20,
+      "gender": "MALE",
+      "pets": null
+    }
+  ]
+}
